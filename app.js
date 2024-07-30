@@ -16,7 +16,7 @@ $(function () {
   // Exercise 3: Find all ancestor <div> elements of a paragraph and change their background color
   $("#exercise3Button").on("click", function () {
     // console.log($("#exercise3 p").parents());
-    $("#exercise3 p").parents("#exercise3").css({
+    $("#exercise3 p").parents().css({
       "background-color": "red",
     });
   });
