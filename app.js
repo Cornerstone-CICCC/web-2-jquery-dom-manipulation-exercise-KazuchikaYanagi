@@ -23,29 +23,21 @@ $(function () {
 
   // Exercise 4: From the `this` selector, find and hide only the second <p> sibling of the <h3> element. The `this` keyword refers to the clicked button
   $("#exercise4Button").on("click", function () {
-    $(this).siblings("#exercise4 p:last").hide();
+    $(this).siblings("p:last").hide();
   });
 
   // Exercise 5: From the `this` selector, find all <p> elements within the <div> and add a border to them. The `this` keyword refers to the clicked button
   $("#exercise5Button").on("click", function () {
-    // console.log($(this).parents("#exercise5").children().find("p"));
-    $(this).parents("#exercise5").children().find("p").css({
+    // console.log($(this).parents("#exercise5").find("p"));
+    $(this).parents("#exercise5").find("p").css({
       border: "1px solid black",
     });
   });
 
   // Exercise 6: From the `this` selector, find and change the color of <span>Item 5</span>. The `this` keyword refers to the clicked button
   $("#exercise6Button").on("click", function () {
-    // console.log($(this).parents("#exercise6").children().nextAll("div:last"));
-    // console.log(
-    //   $(this).siblings().prev("div:last").children().children().children().css({color: "red"})
-    // );
-    $(this)
-      .siblings()
-      .prev("div:last")
-      .children()
-      .children()
-      .children()
-      .css({ color: "red" });
+    console.log($(this).prevAll("div:first").find("span"));
+
+    $(this).prevAll("div:first").find("span").css({ color: "red" });
   });
 });
